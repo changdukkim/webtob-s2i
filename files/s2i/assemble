@@ -13,6 +13,5 @@ fi
 if [ -d $LOCAL_SOURCE_DIR/config ]; then
   echo "Copying config files from conf of git project..."
   cp -Rf $LOCAL_SOURCE_DIR/config/* $WEBTOB_ROOT/config/
-  $WEBTOB_ROOT/bin/wscfl -i $WEBTOB_ROOT/config/http.m
 fi
 
