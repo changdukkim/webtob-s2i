@@ -108,6 +108,8 @@ objects:
         containers:
         - env: []
           image: ' '
+          command:
+            - "/root/webtob/bin/wsboot"
           livenessProbe:
             httpGet:
               path: /
