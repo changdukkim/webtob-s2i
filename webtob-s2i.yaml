@@ -108,7 +108,11 @@ objects:
         containers:
         - env: []
           image: ' '
-          command: ["/root/webtob/bin/wscfl -i /root/webtob/config/http.m && /root/webtob/bin/wsboot"]
+          command: ["/bin/sh","-c"]
+          args: ["/root/webtob/bin/wscfl -i /root/webtob/config/http.m && /root/webtob/bin/wsboot && /root/webtob/bin/wsadmin"]
+          command:
+          - /bin/sh
+          - -c
           livenessProbe:
             httpGet:
               path: /
