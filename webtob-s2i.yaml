@@ -144,7 +144,7 @@ parameters:
   displayName: Name
   name: NAME
   required: true
-  value: webtob-example
+  value: webtob
 - description: The OpenShift Namespace where the ImageStream resides.
   displayName: Namespace
   name: NAMESPACE
