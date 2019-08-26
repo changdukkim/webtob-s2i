@@ -1,13 +1,17 @@
 FROM registry.bastion.ocpnh.co.kr/webtob:4.1.9.1
 
 LABEL io.k8s.description="Platform for serving static files" \
-      io.k8s.display-name="Apache httpd 2.4" \
+      io.k8s.display-name="Webtob" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,http,http24,apache,httpd,rhscl-httpd24"
+      io.openshift.tags="builder,http,webtob"
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/s2i
 
 COPY files/s2i/ /usr/local/s2i
+
+ENV WEBTOBDIR /root/webtob
+ENV PATH ${WEBTOBDIR}/bin:${PATH}
+ENV LD_LIBRARY_PATH ${WEBTOBDIR}/lib:${LD_LIBRARY_PATH}
 
 RUN useradd -u 1000 -G root webtob \
   && chmod 775 /usr/local/s2i/* \
