@@ -1,7 +1,6 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  app: webtob-s2i
   template: webtob-s2i
 message: |-
   The following service(s) have been created in your project: ${NAME}.
@@ -19,7 +18,6 @@ metadata:
       configuration and application deployment configuration.
     tags: quickstart,webtob
     template.openshift.io/bindable: "false"
-  creationTimestamp: 2019-08-26T02:25:48Z
   name: webtob-s2i
   namespace: openshift
   resourceVersion: "1623"
