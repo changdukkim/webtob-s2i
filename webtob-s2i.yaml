@@ -107,9 +107,6 @@ objects:
           image: ' '
           command: ["/bin/sh","-c"]
           args: ["/root/webtob/bin/wscfl -i /root/webtob/config/http.m; /root/webtob/bin/wsboot; while true; do /root/webtob/bin/wsadmin -C ci; sleep 1; done"]
-          command:
-          - /bin/sh
-          - -c
           livenessProbe:
             httpGet:
               path: /
