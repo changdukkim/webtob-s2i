@@ -1,7 +1,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  template: webtob-reverseproxy-s2i-nh-openshift
+  template: webtob-reverseproxy-s2i-openshift
 message: |-
   The following service(s) have been created in your project: ${NAME}.
   For more information about using this template, including OpenShift considerations, see https://github.com/openshift/webtob-ex/blob/master/README.md.
@@ -17,7 +17,7 @@ metadata:
       configuration and application deployment configuration.
     tags: quickstart,webtob
     template.openshift.io/bindable: "false"
-  name: webtob-reverseproxy-s2i-nh-openshift
+  name: webtob-reverseproxy-s2i-openshift
   namespace: openshift
 objects:
 - apiVersion: v1
