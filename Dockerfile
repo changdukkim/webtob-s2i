@@ -1,4 +1,4 @@
-FROM registry.bastion.ocpnh.co.kr/webtob:4.1.9.1
+FROM registry.bastion.ocpnh.com:5000/webtob:4.1.9.1
 
 LABEL io.k8s.description="Platform for serving static files" \
       io.k8s.display-name="Webtob" \
