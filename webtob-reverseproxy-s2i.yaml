@@ -45,6 +45,8 @@ objects:
     to:
       kind: Service
       name: ${NAME}
+    port:
+      targetPort: 8080
 - apiVersion: v1
   kind: ImageStream
   metadata:
