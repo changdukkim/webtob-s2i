@@ -1,7 +1,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  template: webtob-s2i
+  template: webtob-s2i-nh-openshift
 message: |-
   The following service(s) have been created in your project: ${NAME}.
   For more information about using this template, including OpenShift considerations, see https://github.com/openshift/webtob-ex/blob/master/README.md.
@@ -11,14 +11,14 @@ metadata:
       content. For more information about using this template, including OpenShift
       considerations, see https://github.com/openshift/webtob-ex/blob/master/README.md.
     iconClass: icon-apache
-    openshift.io/display-name: Webtob HTTP Server for NH based on Openshift
+    openshift.io/display-name: Webtob HTTP Server for NH on Openshift
     openshift.io/documentation-url: https://github.com/openshift/webtob-ex
     openshift.io/long-description: This template defines resources needed to develop
       a static application served by Apache HTTP Server (webtob), including a build
       configuration and application deployment configuration.
     tags: quickstart,webtob
     template.openshift.io/bindable: "false"
-  name: webtob-s2i
+  name: webtob-s2i-nh-openshift
   namespace: openshift
 objects:
 - apiVersion: v1
