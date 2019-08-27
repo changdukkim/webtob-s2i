@@ -11,7 +11,7 @@ metadata:
       content. For more information about using this template, including OpenShift
       considerations, see https://github.com/openshift/webtob-ex/blob/master/README.md.
     iconClass: icon-apache
-    openshift.io/display-name: Webtob HTTP Server for NH
+    openshift.io/display-name: Webtob HTTP Server for NH based on Openshift
     openshift.io/documentation-url: https://github.com/openshift/webtob-ex
     openshift.io/long-description: This template defines resources needed to develop
       a static application served by Apache HTTP Server (webtob), including a build
@@ -20,9 +20,6 @@ metadata:
     template.openshift.io/bindable: "false"
   name: webtob-s2i
   namespace: openshift
-  resourceVersion: "1623"
-  selfLink: /apis/template.openshift.io/v1/namespaces/openshift/templates/webtob-example
-  uid: d0e93529-c7a8-11e9-bd55-02845dce086c
 objects:
 - apiVersion: v1
   kind: Service
@@ -119,7 +116,7 @@ objects:
               port: 8080
             initialDelaySeconds: 30
             timeoutSeconds: 3
-          name: webtob
+          name: ${NAME}
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -147,7 +144,7 @@ parameters:
   displayName: Name
   name: NAME
   required: true
-  value: webtob
+  value: webtob-example
 - description: The OpenShift Namespace where the ImageStream resides.
   displayName: Namespace
   name: NAMESPACE
