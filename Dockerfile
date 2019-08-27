@@ -19,7 +19,7 @@ RUN useradd -u 1000 -G root webtob \
   && chown -R webtob:root /root/webtob 
 
 # 8080 포트를 오픈한다.
-EXPOSE 8080
+EXPOSE 8080 9900
 
 USER 1000
  
